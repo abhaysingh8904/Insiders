@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOPM - Complete Overview</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        .section {
+            padding: 20px;
+            margin: 15px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 12px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Object-Oriented Programming Methodology (OOPM)</h1>
+    <p>Complete Overview for Students & Projects</p>
+</header>
+
+<div class="section">
+    <h2>What is OOPM?</h2>
+    <p>
+        Object-Oriented Programming Methodology (OOPM) is a programming approach that
+        focuses on objects which represent real-world entities. Each object contains
+        data (variables) and behavior (methods).
+    </p>
+</div>
+
+<div class="section">
+    <h2>Main Concepts of OOPM</h2>
+    <ul>
+        <li>Class</li>
+        <li>Object</li>
+        <li>Encapsulation</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+        <li>Abstraction</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Features of OOPM</h2>
+    <ul>
+        <li>Modularity</li>
+        <li>Reusability</li>
+        <li>Flexibility</li>
+        <li>Security</li>
+        <li>Easy maintenance</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Advantages of OOPM</h2>
+    <ul>
+        <li>Code reusability through inheritance</li>
+        <li>Improved maintainability</li>
+        <li>Better data security</li>
+        <li>Real-world problem solving</li>
+        <li>Scalable applications</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Applications of OOPM</h2>
+    <ul>
+        <li>Web applications</li>
+        <li>Mobile applications</li>
+        <li>Game development</li>
+        <li>Enterprise software</li>
+        <li>GUI-based systems</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Examples of OOP Languages</h2>
+    <ul>
+        <li>Java</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>C#</li>
+        <li>Ruby</li>
+    </ul>
+</div>
+
+<!-- 1 -->
+<div class="section">
+<h2>1. Class & Object</h2>
+<p>
+A class is a blueprint used to create objects. An object is an instance of a class.
+</p>
+
+<pre><code>
+class Student {
+    int id;
+    String name;
+
+    void display() {
+        System.out.println(id + " " + name);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.id = 1;
+        s.name = "Rahul";
+        s.display();
+    }
+}
+</code></pre>
+</div>
+
+<!-- 2 -->
+<div class="section">
+<h2>2. Constructor</h2>
+<p>
+A constructor initializes objects automatically when they are created.
+</p>
+
+<pre><code>
+class Employee {
+    int id;
+
+    Employee(int i) {
+        id = i;
+    }
+}
+</code></pre>
+</div>
+
+<!-- 3 -->
+<div class="section">
+<h2>3. Encapsulation</h2>
+<p>
+Encapsulation protects data by making variables private and accessing them using methods.
+</p>
+
+<pre><code>
+class BankAccount {
+    private int balance = 1000;
+
+    public int getBalance() {
+        return balance;
+    }
+}
+</code></pre>
+</div>
+
+<!-- 4 -->
+<div class="section">
+<h2>4. Inheritance</h2>
+<p>
+Inheritance allows a class to reuse properties of another class.
+</p>
+
+<pre><code>
+class Animal {
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+</code></pre>
+</div>
+
+<!-- 5 -->
+<div class="section">
+<h2>5. Polymorphism</h2>
+<p>
+Polymorphism allows one method to behave differently.
+</p>
+
+<pre><code>
+class Shape {
+    void draw() {
+        System.out.println("Drawing shape");
+    }
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing circle");
+    }
+}
+</code></pre>
+</div>
+
+<!-- 6 -->
+<div class="section">
+<h2>6. Abstraction</h2>
+<p>
+Abstraction hides implementation details.
+</p>
+
+<pre><code>
+abstract class Bank {
+    abstract int getInterestRate();
+}
+</code></pre>
+</div>
+
+<!-- 7 -->
+<div class="section">
+<h2>7. Interface</h2>
+<p>
+Interfaces support multiple inheritance.
+</p>
+
+<pre><code>
+interface Payment {
+    void pay();
+}
+</code></pre>
+</div>
+
+<!-- 8 -->
+<div class="section">
+<h2>8. Exception Handling</h2>
+<p>
+Handles runtime errors.
+</p>
+
+<pre><code>
+try {
+    int a = 10 / 0;
+} catch (Exception e) {
+    System.out.println("Error occurred");
+}
+</code></pre>
+</div>
+
+<!-- 9 -->
+<div class="section">
+<h2>9. Multithreading</h2>
+<p>
+Allows multiple threads to run simultaneously.
+</p>
+
+<pre><code>
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
+</code></pre>
+</div>
+
+<!-- 10 -->
+<div class="section">
+<h2>10. File Handling</h2>
+<p>
+Used to store data permanently.
+</p>
+
+<pre><code>
+FileWriter fw = new FileWriter("data.txt");
+fw.write("Hello Java");
+fw.close();
+</code></pre>
+</div>
+
+<footer>
+    <p>© 2025 | OOPM Project Page</p>
+</footer>
+
+</body>
+</html>

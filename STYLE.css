@@ -1,0 +1,75 @@
+body{
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    font-size: 25px;   
+    min-height: 100VH; 
+    min-width: 250wh;     
+    margin: 0;
+    background-image: url(https://newhorizongurukul.in/wp-content/uploads/2024/08/Education-in-India-The-Gurukula-System-1.jpg);
+    background-size: cover;
+    border: solid,5px;
+    color: black;
+    font-family: arial black;
+    background-color: beige;
+    border: solid, 5px ,black;
+  }
+  #box{
+    position: relative;
+    right: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    display: block inline;
+    text-align: center;
+    height: 400px;
+    width: 500px;
+    border: solid black 5px;
+    background-image: url();
+    background-size: cover;
+    border-radius: 25px;
+    
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  #buttons{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  #id{
+    height: 40px;
+    width: 100px;
+    background-color: aqua;
+  }
+
+   input{
+    height: 20px;
+    width: 250px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.7em;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+   }
+   button{
+  
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(117, 227, 249);
+   }
+   
+   
+   div{
+    
+    display: inline;
+   }
+   
+   

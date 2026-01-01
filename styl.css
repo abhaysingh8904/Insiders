@@ -1,0 +1,671 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: black;
+    
+}
+
+.navbar{
+     height: 60px;
+     width: 100%;
+     background-color: #b8e3e9;
+     display: flex;
+    
+     align-items: center;
+     flex-grow: 2;
+     display: block inline;
+     
+}
+
+#aibox{
+    height: 35px;
+    width: 500px;
+    flex-shrink: 0;
+    display: flex;
+    background-color: white;
+    position: relative;
+    left: 200px;
+    top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+#aibox2{
+    display: flex;
+    flex-shrink: 0;
+    width: 50px;
+    height: 35px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    top: 11px;
+    left: 148px;
+    border: none;
+    border-radius: 9px;
+    background-color: orange;
+    color: white;
+}
+#login{
+    display: flex;
+   
+    position: relative;
+    left: 1100px;
+
+    text-align: center;
+   
+    height: 100px;
+    width: 100px;
+    background-image: url(logon.webp);
+    background-size: cover;
+    justify-content: space-evenly;
+
+   
+}
+#icon{
+    position: relative;
+    left: 1200px;
+    font-size: 25px;
+}
+
+
+#logo{
+    background-image: url(https://1000logos.net/wp-content/uploads/2024/02/Business-Insider-Logo-2021.png);
+    height: 60px;
+    width: 120px;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    left: 20px;
+   
+    
+}
+#pageimg{
+    height: 500px;
+    
+    display: flex;
+    position: relative;
+    justify-content: center;
+    display: block inline-flexbox ;
+    gap: 5px;
+    
+    
+}
+
+
+#content{
+    border-top: #7A8B94;
+    background-color: #b8e3e9;
+    height: 1100px;
+    display: flex;
+    position: relative;
+    
+    text-align: center;
+    display: block inline;
+    justify-content: space-evenly;
+    flex-direction: column;
+   
+    display: flex; 
+    border: 2px solid black;
+}
+#btn1{
+    height: 100px;
+    width: 200px;
+    background-color: #08BD80;
+    position: relative;
+    
+    top: 100px;
+    color: white;
+    border-radius: 10px;
+    font-family: apple-system;
+    font-size: 1.5em;
+    border: solid #7A8B94 1px;
+    top: 60px;
+    left: 400px;
+    
+    
+}
+#btn2{
+     height: 100px;
+    width: 200px;
+    background-color: #08BD80;
+    position: relative;
+    top: 100px;
+    color: white;
+    border-radius: 10px;
+    font-family: apple-system;
+    font-size: 1.5em;
+    border: solid #7A8B94 1px;
+    top: 60px;
+    left: 400px;
+}
+#btn3{
+     height: 100px;
+    width: 200px;
+    background-color: #08BD80;
+    position: relative;
+    top: 100px;
+    color: white;
+    border-radius: 10px;
+    font-family: apple-system;
+    font-size: 1.5em;
+    border: solid #7A8B94 1px;
+    top: 60px;
+    left: 400px;
+}
+#btn4{
+     height: 100px;
+    width: 200px;
+    background-color:  #08BD80;
+    position: relative;
+    top: 100px;
+    color: white;
+    border-radius: 10px;
+    font-family: apple-system;
+    font-size: 1.5em;
+    border: solid #7A8B94 1px;
+    top: 60px;
+    left: 400px;
+}
+#btn5{
+     height: 100px;
+    width: 200px;
+    background-color: #08BD80;
+    position: relative;
+    top: 100px;
+    color: white;
+    border-radius: 10px;
+    font-family: apple-system;
+    font-size: 1.5em;
+    border: solid #7A8B94 1px;
+    top: 60px;
+    left: 400px;
+}
+footer {
+    height: 400px;
+    text-align: center;
+    display: block inline;
+    padding: 20px;
+    
+    
+   background-color: #b8e3e9;
+}
+.play{
+    
+    width: 250px;
+    display: flex;
+    display: block inline;
+    justify-content: space-evenly;
+
+
+}
+#app{
+    height: 40px;
+    width: 130px;
+    border-radius: 15px;
+    background-image: url(https://dassem-ultor-studio.github.io/html-website-inspector/assets/images/google-play-badge.svg);
+    background-size: cover;
+    background-color: aqua;
+    border: none;
+    
+    position: relative;
+    bottom: 30px;
+    
+}
+#apps{
+    height: 40px;
+    width: 130px;
+    border-radius: 15px;
+    background-image: url(https://e7.pngegg.com/pngimages/2/670/png-clipart-logo-app-store-font-brand-product-app-store-play-store-text-logo.png);
+    background-size: cover;
+    background-color: aqua;
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+}
+
+
+
+#tools{
+    position: relative;
+    bottom: 15px;
+text-align: center;
+
+    text-align: left;
+}
+a{
+    text-decoration: none;
+}
+#right{
+    display: flex;
+    justify-content: center;
+
+}
+#info{
+
+    height: 200px;
+    width: 250px;
+
+    float: right;
+    display: flex;
+    position: relative;
+    bottom: 100px;
+    right: 140px;
+    font-size: 0.8em;
+    text-align: center;
+    
+    justify-content: space-evenly;
+
+}
+
+
+
+/*for about us page*/
+body{
+    /* background-color: beige;*/
+    height: 1500px;
+    background-color: #b8e3e9;
+}
+#topline{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    
+
+}
+#blankspace{
+    align-items: center;
+    position: relative;
+    top: 20px;
+    left: 70px;
+    height: 5px;
+    width: 90%;
+    background-color: black;
+    ;
+}
+#leaderpfp{
+   position: relative;
+   left: 60%;
+   top: 50px;
+   border-radius: 15%;
+   
+   background-image: url(abhay-2.jpg);
+   background-size: cover;
+   height: 500px;
+   width: 500px;
+   background-color: violet;
+}
+
+p{
+    position: relative;
+    top: 100px;
+    left: 90px;
+    font-size: 1.5em;
+    height: 40px;
+    width: 600px;
+}
+h2{
+    
+    text-align: center;
+    position: relative;
+    right: 350px;
+    text-decoration: underline;
+}
+#tech{
+    position: relative;
+    top: 50px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    display: block inline;
+}
+#updates{
+    position: relative;
+    top: 800px;
+}
+
+/* Importing google fonts - inter */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#EEEEFF , #C8C7Ff);
+}
+
+#chatbot-toggler{
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #5350C4;
+    transition: all 0.2 ease;
+}
+
+body.show-chatbot #chatbot-toggler {
+    transform: rotate(90deg);
+}
+#chatbot-toggler span{
+    color: #fff;
+    position: absolute;
+}
+
+body.show-chatbot #chatbot-toggler span:first-child ,
+#chatbot-toggler span:last-child{
+    opacity: 0;
+}
+
+body.show-chatbot #chatbot-toggler span:last-child{
+    opacity: 1;
+}
+
+.Chat-popup{
+    position: fixed;
+    right: 35px;
+    bottom: 90px;
+   width: 420px;
+   background: #fff;
+   overflow: hidden; 
+   border-radius: 15px;
+   opacity:0;
+   transform: scale(0.2);
+   transform-origin: bottom right;
+   box-shadow:0 0 128px 0 rgba(0 , 0 , 0 ,0.1), 0 32 ,64px -48px rgba(0,0,0,0.5) ;
+   transition: all 0.1s ease;
+}
+
+body.show-chatbot .Chat-popup{
+opacity: 1;
+pointer-events: auto;
+   transform: scale(1);
+}
+
+.Chat-header{
+    display: flex;
+    align-items: center;
+    background: #5350C4;
+    padding: 15px 22px;
+    justify-content: space-between;
+}
+
+.Chat-header .header-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-info .chatSom-logo{
+height: 35px;
+width: 35px;
+padding: 6px;
+fill: #5350C4;
+background: #fff;
+flex-shrink: 0;
+border-radius: 50%;
+}
+
+.header-info .logo-text{
+    color: #fff;
+    font-size: 1.31rem;
+    font-weight: 600;
+}
+
+.Chat-header #close-chatSom{
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size:1.9rem ;
+    margin-right: -10px;
+    padding-top: 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: none;
+    transition:0.2s ease ;
+}
+
+.Chat-header #close-chatSom:hover{
+     background: #3d39ac;
+}
+
+.chat-body{
+    padding: 25px 22px ;
+    display: flex;
+    gap: 20px;
+    height: 460px;
+    margin-bottom: 82px;
+    overflow-y:auto ;
+    flex-direction: column;
+}
+.chat-body .message{
+display: flex;
+align-items: center;
+gap: 11px;
+}
+.chat-body .bot-message .bot-avatar{
+height: 35px;
+width: 35px;
+padding: 6px;
+fill: #fff;
+margin-bottom: 2px;
+align-self: flex-end;
+background: #5350C4;
+flex-shrink: 0;
+border-radius: 50%;
+}
+.chat-body .user-message{
+    flex-direction: column;
+    align-items: flex-end;
+}
+.chat-body .message .message-text {
+    padding: 12px 16px;
+    max-width: 75%;
+    font-size: 0.95rem;
+    background: #F2F2FF;
+}
+.chat-body .bot-message.thinking .message-text{
+    padding: 2px 16px;
+}
+.chat-body .bot-message .message-text{
+    background: #F2F2FF;
+border-radius: 13px 13px 13px 3px ;
+}
+.chat-body .user-message .message-text{
+    color: #fff;
+    background: #5353C4;
+border-radius: 13px 13px 3px 13px ;
+}
+.chat-body .user-message .attachment {
+width: 50%;
+margin-top: -7px;
+border-radius: 13px 3px 13px 13px ;
+}
+.chat-body .bot-message .thinking-indicator{
+    display: flex;
+    gap: 4px;
+    padding-block: 15px;
+}
+.chat-body .bot-message .thinking-indicator .dot{
+height: 7px;
+width: 7px;
+opacity: 0.7;
+border-radius: 50%;
+background: #6F6BC2;
+animation: dotPulse 1.8s ease-in-out infinite;
+}
+.chat-body .bot-message .thinking-indicator .dot:nth-child(1){
+animation-delay: 0.2s;
+}
+.chat-body .bot-message .thinking-indicator .dot:nth-child(2){
+animation-delay: 0.3s;
+}
+.chat-body .bot-message .thinking-indicator .dot:nth-child(3){
+animation-delay: 0.4s;
+}
+@keyframes dotPulse{
+0%, 44%{
+    transform: translateY(0);
+}
+28%{
+    opacity: 0.4;
+    transform: translateY(-4px);
+}
+44%{
+    opacity: 0.2;
+}
+}
+.chat-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 15px 22px 20px;
+}
+
+.chat-footer .chat-form{
+display: flex;
+position: relative;
+align-items: center;
+background: #fff;
+border-radius:32px ;
+outline: 1px solid #CCCCE5;
+}
+.chat-footer .chat-form:focus-within{
+    outline: 1px solid #5350C4;
+}
+
+.chat-form .message-input{
+border: none;
+outline: none;
+height: 47px;
+width: 100%;
+resize: none;
+max-height: 180px;
+white-space: pre-line;
+font-size: 0.95rem;
+padding: 14px 0 13px 18px;
+border-radius: inherit;
+scrollbar-width: thin;
+scrollbar-color: transparent transparent;
+}
+
+.chat-form .message-input:hover {
+scrollbar-color: #ccccf5 transparent;
+
+}
+
+.chat-form .chat-controls{
+display: flex;
+height: 47px;
+gap: 3px;
+align-items: center;
+align-self: flex-end;
+padding-right: 6px;
+}
+.chat-form .chat-controls button{
+    height: 35px;
+    width: 35px;
+border: none;
+cursor: pointer;
+color: #706DB0;
+background: none;
+font-size:1.15rem ;
+border-radius: 50%;
+transition: 0.2s ease;
+}
+.chat-form .chat-controls #send-message{
+color: #fff;
+display: none;
+background: #5350C4;
+}
+.chat-form .message-input:valid~.chat-controls #send-message{
+display: block;
+}
+.chat-form .chat-controls #send-message:hover{
+    background: #3d39ac;
+}
+.chat-form .chat-controls button:hover{
+    background: #f1f1ff;
+}
+.chat-form .file-upload-wrapper{
+    height: 35px;
+    width: 35px;
+    position: relative;
+}
+.chat-form .file-upload-wrapper :where(img, button){
+position: absolute;
+}
+.chat-form .file-upload-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.chat-form .file-upload-wrapper #file-cancel{
+    color: #ff0000;
+    background : #fff;
+}
+.chat-form .file-upload-wrapper :where(img, #file-cancel),
+.chat-form .file-upload-wrapper.file-uploaded #file-upload{
+display: none;
+}
+.chat-form .file-upload-wrapper.file-uploaded img,
+.chat-form .file-upload-wrapper.file-uploaded:hover #file-cancel{
+display: block;
+}
+
+em-emoji-picker {
+position: absolute;
+left: 50%;
+top: -337px;
+width: 100%;
+max-width: 350px;
+max-height: 330px;
+visibility: hidden;
+transform: translateX(-50%);
+}
+
+body.show-emoji-picker em-emoji-picker {
+visibility:visible;
+}
+
+/* Responsive media query for mobile screens */ 
+@media (max-width: 520px) {
+#chatbot-toggler {
+right: 20px;
+bottom: 20px;
+}
+
+.chatbot-popup {
+right: 0; 
+bottom: 0;
+height: 100%;
+border-radius: 0;
+width: 100%;
+}
+
+.chatbot-popup .chat-header {
+padding: 12px 15px;
+}
+.chat-body {
+height: calc(90% - 55px);
+padding: 25px 15px;
+}
+.chat-footer {
+padding: 10px 15px 15px;
+}
+.chat-form .file-upload-wrapper.file-uploaded #file-cancel {
+opacity: 0;
+}
+}
