@@ -5,7 +5,7 @@
 // ==================================================
 
 // ✅ Paste your Gemini API key only inside these quotes
-const GEMINI_API_KEY = "AIzaSyCIQaRxCGHql-XIckglIsX3f5zZAvBxWKE";
+const GEMINI_API_KEY = "AIzaSyBT3LHLjNmZAOwYumjC_NncRjPfvz6m3o8";
 
 // ✅ Model name
 const GEMINI_MODEL = "gemini-2.5-flash";
