@@ -1,14 +1,8 @@
 // ==================================================
 // FULL CORRECT WORKING CHATBOT CODE
-// Gemini AI Integration
+// Frontend calls Vercel Serverless Function
 // Save this file as: chat.js
 // ==================================================
-
-// ✅ Paste your Gemini API key only inside these quotes
-const GEMINI_API_KEY = "AIzaSyB2oMmTpVn4nWLxl2ACcDhyNFixoOgppWk";
-
-// ✅ Model name
-const GEMINI_MODEL = "gemini-2.5-flash";
 
 // ==================================================
 // Select HTML Elements
@@ -21,6 +15,34 @@ const messageInput = document.querySelector(".message-input");
 const sendMessageBtn = document.querySelector("#send-message");
 const fileUploadBtn = document.querySelector("#file-upload");
 const fileInput = document.querySelector("#file-input");
+
+// ==================================================
+// Call Serverless API
+// ==================================================
+
+async function getAIReply(userMessage) {
+  try {
+    const response = await fetch("/api/gemini", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: userMessage
+      })
+    });
+
+    const data = await response.json();
+
+    if (data.reply) {
+      return data.reply;
+    }
+
+    return "AI Error: " + (data.error || data.details || "Something went wrong");
+  } catch (error) {
+    return "AI Error: " + error.message;
+  }
+}
 
 // ==================================================
 // Open / Close Chatbot
@@ -116,79 +138,6 @@ function showTypingIndicator() {
 }
 
 // ==================================================
-// Gemini API Call
-// ==================================================
-
-async function callGeminiText(userMessage) {
-  if (
-    !GEMINI_API_KEY ||
-    GEMINI_API_KEY.trim() === "" ||
-    GEMINI_API_KEY === "PASTE_YOUR_API_KEY_HERE"
-  ) {
-    return "API key missing. Paste your Gemini API key inside chat.js.";
-  }
-
-  const API_URL =
-    "https://generativelanguage.googleapis.com/v1beta/models/" +
-    GEMINI_MODEL +
-    ":generateContent?key=" +
-    GEMINI_API_KEY;
-
-  const requestBody = {
-    contents: [
-      {
-        parts: [
-          {
-            text:
-              "You are an AI Study Assistant for students. " +
-              "Answer simply and clearly. " +
-              "Help with DBMS, OOPM, Operating System, Data Structures, Java, programming, projects, and interviews.\n\n" +
-              "User question: " +
-              userMessage
-          }
-        ]
-      }
-    ]
-  };
-
-  try {
-    const response = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(requestBody)
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      console.error("Gemini API Error:", data);
-
-      if (data.error && data.error.message) {
-        return "AI Error: " + data.error.message;
-      }
-
-      return "AI error. Check your API key or Gemini API access.";
-    }
-
-    const aiText =
-      data &&
-      data.candidates &&
-      data.candidates[0] &&
-      data.candidates[0].content &&
-      data.candidates[0].content.parts &&
-      data.candidates[0].content.parts[0] &&
-      data.candidates[0].content.parts[0].text;
-
-    return aiText || "Sorry, I could not generate a response.";
-  } catch (error) {
-    console.error("Network Error:", error);
-    return "Network error. Check your internet connection.";
-  }
-}
-
-// ==================================================
 // Send Message
 // ==================================================
 
@@ -212,7 +161,7 @@ async function handleSendMessage() {
   const typingIndicator = showTypingIndicator();
 
   try {
-    const aiReply = await callGeminiText(userMessage);
+    const aiReply = await getAIReply(userMessage);
 
     if (typingIndicator) {
       typingIndicator.remove();
@@ -226,7 +175,7 @@ async function handleSendMessage() {
       typingIndicator.remove();
     }
 
-    addBotMessage("Something went wrong. Please check your API key or internet connection.");
+    addBotMessage("Something went wrong. Please try again.");
   }
 }
 
