@@ -9,12 +9,16 @@
 // ==================================================
 
 const chatbotToggler = document.querySelector("#chatbot-toggler");
-const closeChatbot = document.querySelector("#close-chatbot");
+const closeChatbot = document.querySelector("#close-chatSom");
 const chatBody = document.querySelector(".chat-body");
 const messageInput = document.querySelector(".message-input");
 const sendMessageBtn = document.querySelector("#send-message");
 const fileUploadBtn = document.querySelector("#file-upload");
 const fileInput = document.querySelector("#file-input");
+
+// Top Ask AI Elements
+const topAIInput = document.querySelector("#top-ai-input");
+const topAIBtn = document.querySelector("#top-ai-btn");
 
 // ==================================================
 // Call Serverless API
@@ -60,6 +64,20 @@ async function getAIReply(userMessage) {
 // Open / Close Chatbot
 // ==================================================
 
+function openChatbot() {
+  document.body.classList.add("show-chatbot");
+
+  setTimeout(function () {
+    if (messageInput) {
+      messageInput.focus();
+    }
+  }, 200);
+}
+
+function closeChatbotPopup() {
+  document.body.classList.remove("show-chatbot");
+}
+
 if (chatbotToggler) {
   chatbotToggler.addEventListener("click", function () {
     document.body.classList.toggle("show-chatbot");
@@ -73,9 +91,7 @@ if (chatbotToggler) {
 }
 
 if (closeChatbot) {
-  closeChatbot.addEventListener("click", function () {
-    document.body.classList.remove("show-chatbot");
-  });
+  closeChatbot.addEventListener("click", closeChatbotPopup);
 }
 
 // ==================================================
@@ -150,25 +166,18 @@ function showTypingIndicator() {
 }
 
 // ==================================================
-// Send Message
+// Ask AI Common Function
 // ==================================================
 
-async function handleSendMessage() {
-  if (!messageInput || !chatBody) {
-    console.error("Chat elements missing in HTML.");
+async function askAI(userMessage) {
+  if (!chatBody) {
+    console.error("Chat body missing in HTML.");
     return;
   }
 
-  const userMessage = messageInput.value.trim();
-
-  if (userMessage === "") {
-    return;
-  }
+  openChatbot();
 
   addUserMessage(userMessage);
-
-  messageInput.value = "";
-  messageInput.style.height = "42px";
 
   const typingIndicator = showTypingIndicator();
 
@@ -192,6 +201,63 @@ async function handleSendMessage() {
 }
 
 // ==================================================
+// Send Message From Chatbot
+// ==================================================
+
+async function handleSendMessage() {
+  if (!messageInput || !chatBody) {
+    console.error("Chat elements missing in HTML.");
+    return;
+  }
+
+  const userMessage = messageInput.value.trim();
+
+  if (userMessage === "") {
+    return;
+  }
+
+  messageInput.value = "";
+  messageInput.style.height = "42px";
+
+  await askAI(userMessage);
+}
+
+// ==================================================
+// Send Message From Top Ask AI Bar
+// ==================================================
+
+async function handleTopAIAsk() {
+  if (!topAIInput || !messageInput) {
+    return;
+  }
+
+  const userMessage = topAIInput.value.trim();
+
+  if (userMessage === "") {
+    return;
+  }
+
+  // Open chatbot
+  openChatbot();
+
+  // Paste navbar question into chatbot textarea
+  messageInput.value = userMessage;
+
+  // Clear navbar input
+  topAIInput.value = "";
+
+  // Adjust textarea height
+  messageInput.style.height = "42px";
+  messageInput.style.height = Math.min(messageInput.scrollHeight, 110) + "px";
+
+  // Focus chatbot input
+  messageInput.focus();
+
+  // Automatically send message to AI
+  await handleSendMessage();
+}
+
+// ==================================================
 // Send Button Click
 // ==================================================
 
@@ -202,7 +268,17 @@ if (sendMessageBtn) {
 }
 
 // ==================================================
-// Enter Key Send
+// Top Ask AI Button Click
+// ==================================================
+
+if (topAIBtn) {
+  topAIBtn.addEventListener("click", function () {
+    handleTopAIAsk();
+  });
+}
+
+// ==================================================
+// Enter Key Send in Chatbot
 // Shift + Enter = New Line
 // ==================================================
 
@@ -217,6 +293,19 @@ if (messageInput) {
   messageInput.addEventListener("input", function () {
     messageInput.style.height = "42px";
     messageInput.style.height = Math.min(messageInput.scrollHeight, 110) + "px";
+  });
+}
+
+// ==================================================
+// Enter Key Send in Top Ask AI Bar
+// ==================================================
+
+if (topAIInput) {
+  topAIInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleTopAIAsk();
+    }
   });
 }
 

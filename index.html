@@ -35,9 +35,14 @@
         </div>
       </div>
 
+      <!-- Top AI Search -->
       <form class="search-box" onsubmit="return false;">
-        <input id="aibox" type="text" placeholder="Ask AI anything..." />
-        <button type="button" id="aibox2" onclick="askGemini()">Ask AI</button>
+        <input
+          id="top-ai-input"
+          type="text"
+          placeholder="Ask AI anything..."
+        />
+        <button type="button" id="top-ai-btn">Ask AI</button>
       </form>
 
       <div class="nav-actions">
@@ -50,8 +55,6 @@
         </div>
       </div>
     </nav>
-
-    <p id="response"></p>
   </header>
 
   <!-- Main Content -->
@@ -188,28 +191,26 @@
         ></textarea>
 
         <div class="chat-controls">
-  <input
-    type="file"
-    id="file-input"
-    accept="image/*,video/*"
-    hidden
-  />
+          <input
+            type="file"
+            id="file-input"
+            accept="image/*,video/*"
+            hidden
+          />
 
-  <button type="button" id="file-upload" class="material-symbols-rounded">
-    attach_file
-  </button>
+          <button type="button" id="file-upload" class="material-symbols-rounded">
+            attach_file
+          </button>
 
-  <button type="button" id="send-message" class="material-symbols-rounded">
-    arrow_upward
-  </button>
-</div>
+          <button type="button" id="send-message" class="material-symbols-rounded">
+            arrow_upward
+          </button>
+        </div>
       </form>
     </div>
 
   </div>
 
-  
-  
   <script src="chat.js"></script>
 
 </body>
