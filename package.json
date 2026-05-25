@@ -147,6 +147,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+  "node": "20.x"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abhaysingh8904/Insiders.git"
