@@ -9,7 +9,7 @@
 // ==================================================
 
 const chatbotToggler = document.querySelector("#chatbot-toggler");
-const closeChatbot = document.querySelector("#close-chatSom");
+const closeChatbot = document.querySelector("#close-chatbot");
 const chatBody = document.querySelector(".chat-body");
 const messageInput = document.querySelector(".message-input");
 const sendMessageBtn = document.querySelector("#send-message");
@@ -32,13 +32,25 @@ async function getAIReply(userMessage) {
       })
     });
 
-    const data = await response.json();
+    const text = await response.text();
+
+    if (!text) {
+      return "AI Error: Empty response from server.";
+    }
+
+    let data;
+
+    try {
+      data = JSON.parse(text);
+    } catch (error) {
+      return "AI Error: Server did not return JSON.";
+    }
 
     if (data.reply) {
       return data.reply;
     }
 
-    return "AI Error: " + (data.error || data.details || "Something went wrong");
+    return "AI Error: " + (data.details || data.error || "Something went wrong");
   } catch (error) {
     return "AI Error: " + error.message;
   }
